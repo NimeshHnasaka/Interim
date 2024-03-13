@@ -1,0 +1,146 @@
+Object detection model  
+Design and Implementation of Wood-based Stable Holder 
+
+
+A sturdy and versatile holder was designed to securely hold the tray during data collection. Crafted from wood, it features a C-shaped design for a firm grip. it has been modified to accommodate a webcam, allowing flexibility in camera options. This wood-based holder offers stability, reliability, and adaptability, facilitating high-quality image capture for the research dataset. 
+
+Image Data Set Collection 
+
+
+The image data set collection plays a pivotal role in training models for object detection and classification. It is crucial to curate a diverse range of photos that accurately represent a wide array of items. This stage holds immense importance as the success of the model heavily relies on the quality and diversity of the data set. To ensure optimal model performance, the data capturing environment should closely resemble the real-life deployment conditions. In this research, the assumption was made that the pastries would be placed on a black tray, while the camera would be positioned at a fixed distance and calibrated with appropriate exposure, aided by a stable holder. 
+For this experiment, ten distinct types of Sri Lankan pastries were carefully chosen to compose the data set. These include Cutlet, Donut, Egg roll, Fish Bun, Pastry, Patis, Sandwich, Sausage Bun, Spanchi, and Kibula Bun. These pastries were selected due to their popularity and recognition within the country. Each pastry variant exhibits unique characteristics in terms of shape, texture, and composition, contributing to the diversity of the data set. However, it is worth noting that certain items may share similar textures or shapes, necessitating precise differentiation during the training process. 
+To visualize the assortment of pastry items utilized for training the model, Figure 10 provides a comprehensive depiction of each distinct pastry category. The inclusion of these visually distinct images enhances the model's ability to accurately classify and detect the respective pastries during inference. By incorporating a wide variety of pastry types and capturing them from different angles and lighting conditions, the image data set collection ensures robust and comprehensive training, leading to improved performance and reliable results in object detection and classification tasks. 
+
+
+image
+
+
+
+
+In terms of the implemented dataset, it comprises a total of 2000 photos captured using a Redmi9 camera. The original photo size is 3120px by 4160px. However, to optimize the operational speed on the laptop, each photo was resized to a resolution of 416 X 416 pixels. This reduction in size does not compromise the quality or integrity of the images but rather enhances the efficiency of the model during training and inference phases. 
+
+
+
+
+
+
+
+
+
+Labelling the image data set  
+
+
+Labelling the image data set is a crucial step in computer vision research. In this study, a comprehensive approach was adopted to label the gathered image data set. After the initial organization of the images, each image was individually labeled using the Roboflow tool. This tool facilitated the annotation process by providing a user-friendly interface and efficient annotation capabilities. The resulting annotations were saved in a suitable format for further analysis and model development. The use of computer vision and natural language processing techniques enabled accurate and descriptive annotations that can be processed by computers. The annotation files generated through this process contained valuable information about the objects, features, or regions of interest present in the images. This annotated image data set serves as a vital resource for training and evaluating computer vision algorithms and models. With a total of 2000 labeled files, this data set offers a diverse range of images, contributing to the advancement of computer vision research and applications. Figure 11 provides a visual representation of the LabelImg annotation interface, showcasing the intuitive and efficient nature of the tool. By leveraging the capabilities of the Roboflow tool and following a systematic annotation process, this research has successfully created a high-quality labeled image data set, paving the way for more accurate and robust computer vision systems. 
+
+
+
+
+
+
+
+Figure 13: Annotating the image data set using Roboflow tool 
+ 
+There after the annotated images were added to the dataset and classified into 3 sections; train, valid and test in the ratio 7:3:1. 
+
+
+
+Then the images were preprocessed using the Auto orient and Resize options available in Roboflow.  
+
+
+
+
+
+
+
+
+
+
+Then the augmentation method was used to multiply the number of images. Here the 7 options namely Flip, 90 Rotate, Rotation, Grayscale, Brightness, Blur, and Cutout available in Roboflow were used for this. 
+
+
+
+Then the images were generated and exported to YOLO v5 with PyTorch library. The generated code link was then copied. 
+
+
+
+. Choosing the development environment to train the model  
+ 
+Choosing the right development environment is crucial for training an effective object detection model. Due to my laptop's limited performance, i opted for an alternative solution. Google Colab emerged as the preferred choice due to its cloud-based platform and powerful computational resources, including high-performance GPUs. This decision aimed to address the demanding computational requirements of training a complex object detection model. Additionally, the researcher leveraged the PyTorch library within the Google Colab environment. PyTorch is known for its flexibility and ease of use, making it ideal for developing and training object detection models. Google Colab provided the necessary infrastructure to handle the computational workload, ensuring faster training and preventing performance bottlenecks. The combination of Google Colab and PyTorch allowed the researcher to efficiently develop and train the model, leading to increased productivity and the ability to conduct extensive experimentation. Ultimately, this approach enabled the researcher to overcome the limitations of my laptop's performance and achieve a highly accurate object detection model for my research project. 
+
+
+
+
+
+Choosing the algorithm and Training Pastry detection model 
+ 
+Choosing the right algorithm and effectively training the pastry detection model are crucial steps in the research process. After completing annotations, the researcher evaluated different algorithms and determined that yolov5 was the most suitable choice due to its exceptional performance and accuracy in object detection. By training the model with a dataset of 2000 images, significant results were achieved. The best model satisfied the following requirements. 
+ 
+•	All items in the input image are precisely identified with overlapping and with good accuracy 
+ 
+•	Identified their locations correctly 
+ 
+•	Objects that are not in the input image are ignored, increasing the operation speed. 
+ 
+  
+To train the AI model, I utilized yolov5 in conjunction with a dataset comprising 2000 photos representing 10 different pastry varieties. The training process was conducted using the Python programming language, leveraging the capabilities of the PyTorch machine learning platform. This choice of development environment allowed for seamless integration with the yolov5 algorithm and facilitated efficient model training. 
+ 
+Through rigorous experimentation and fine-tuning, the researcher optimized the pastry detection model's performance, ensuring robustness and high accuracy. The combination of yolov5, the extensive dataset, and the utilization of the PyTorch machine learning framework within a Google Colab environment contributed to the success of the research endeavor. By adopting this approach, I achieved a state-of-the-art pastry detection model capable of all items in the input image being precisely identified with overlapping and good accuracy, localizing them precisely, and disregarding irrelevant objects for improved operational efficiency. 
+ 
+
+
+
+
+
+
+Validation the AI model 
+ 
+ 
+Validating the AI model is crucial for assessing its performance and reliability. After training, the model is evaluated using a separate testing dataset. Two types of validation are employed: insample validation, testing with the same dataset used for training, and out-of-sample validation, using new data.  
+ 
+•	In-sample validation: Data from the same dataset used to generate the model are tested  
+ 
+•	Out-of-sample validation: Validating data from a new dataset that wasn't utilized to create the model (outside of a sample) 
+ 
+ By analyzing the model's performance and identifying areas for improvement, informed decisions can be made for its deployment. Effective validation ensures the model's effectiveness and enhances its reliability for real-world applications. 
+
+
+
+Development of Graphical User Interface 
+ 
+In my research, I focused on developing a user-friendly graphical user interface (GUI) using the tkinter Python library for the billing system. The tkinter library, being the standard GUI supported by Python, enabled quick and easy GUI creation. The GUI was designed to be intuitive and convenient for users, regardless of their technical background. By leveraging the features of tkinter, I created interactive elements such as buttons and input fields. The GUI incorporated visually appealing design elements and ensured compatibility across different platforms and screen sizes. The development process prioritized user needs, resulting in a well-designed GUI that enhances the usability and accessibility of the billing system. Overall, the tkinter-based GUI provides a seamless and efficient solution for the billing system, contributing to a positive user experience. 
+
+
+Complete the final output of the billing system 
+
+With the help of a flow chart, the complete process can be displayed. Flowchart of the process is shown in figure 25. 
+
+
+
+This research project has mainly considered two function which are pastry detecting model and the bill calculating system. Main functionality is to capture the image of the pastry items using the camera provided and conduct real-time detection of the image. First acquired image of pastry tray and the image running through the trained object detection model. Then Items from the tray should identify correctly to acquire accurate results from the system. The detection findings are displayed in. All ten items were able to accurately identifying by the model, and nine of them have an accuracy rating of 95 percent or higher, indicating that they have a good identification result from the trained model. In addition, the detection of several pastries on the tray produced positive results from the trained model. The results can be shown in Figure 27, which depicts the Two pastries detection and bill calculation. 
+
+
+
+
+
+
+
+
+During the development of this system, various constraints were implemented to enhance its accuracy. A limit was set on the number of pastry products that can be accommodated on the tray, and the scaling of items is determined based on the size of the tray and the items placed on it. Precise identification of all pastries that can be placed on the tray is ensured, with each selected pastry item being represented by more than 1/5 of its actual size.This project aims to utilize yolov5 for fast and real-time object detection. Since there was no existing bakery product dataset in Sri Lanka with boundary box labels, it was necessary to capture and label the data. To reduce processing time for each image, the collected images were compressed to a size of 416x416 pixels. These algorithms demonstrated good performance even when the pastries overlapped. However, when the background of the pastry image was complex or similar in color to the pastry itself, region suggestions were not satisfactory. To address this, validation images were taken with the pastries placed on a black disc, which provided a strong contrast between the object and background. Additionally, to showcase the functionality of the automatic billing system, a variety of pastries were purchased from multiple restaurants in Sri Lanka and arranged on a black tray. This setup resulted in an impressive accuracy rate of 95%. 
+
+
+
+
+
+ (Kagaya, Aizawa and Ogawa, 2014)
+
+Kagaya, H., Aizawa, K. and Ogawa, M. (2014). Food Detection and Recognition Using Convolutional Neural Network. Proceedings of the ACM International Conference on Multimedia - MM ’14. doi:https://doi.org/10.1145/2647868.2654970.
+
+
+
+
+In this research, I have developed an object detection model specifically tailored for Sri Lankan pastry image identification and billing system software. The initial step involved gathering a comprehensive dataset of 2000 pastry images from a local bakery. Subsequently, I conducted a thorough comparison and evaluation of various convolutional neural network (CNN) models for object detection. The goal was to identify a model that strikes a balance between accuracy and operational speed. After careful analysis, I selected a CNN model with an impressive operational speed of 48ms, albeit with some limitations on the collected dataset. The chosen CNN model was then integrated into a billing application, which simplifies the process of billing and management. This software provides a user-friendly interface and streamlines the operations for restaurant use. It is noteworthy that this research presents the first-of-its-kind software developed specifically for identifying individual bakery items as well as overlapping bakery items in Sri Lanka. 
+ 
+The demonstrated automatic machine cashier, utilizing object detection, showcases a proof-ofconcept for calculating retail goods prices using computer vision algorithms rather than traditional methods such as barcode scanning, RFID, or manual price calculation by operators. This approach opens up possibilities for enhancing efficiency and reducing human errors in cashier systems. However, it is important to note that further advancements are necessary to increase the accuracy of object identification and classification before these automated cashiers can be economically viable. Overall, this research contributes to the field of computer vision and bakery management by providing a tailored object detection model and a user-friendly billing system. The successful integration of the CNN model into the billing application paves the way for improved efficiency and accuracy in identifying bakery items. As future work, it is recommended to focus on enhancing the accuracy of object detection algorithms and expanding the dataset to accommodate a wider range of pastry varieties. With further advancements, this research sets the stage for the adoption of computer vision algorithms in automated cashiers, revolutionizing the retail industry. 
+
+
+17.	JUBAYER, F., SOEB, J. A., MOJUMDER, A. N., PAUL, M. K., BARUA, P., KAYSHAR, S., AKTER, S. S., RAHMAN, M. & ISLAM, A. 2021. Detection of mold on the food surface using YOLOv8. Current Research in Food Science, 4, 724-728. 
