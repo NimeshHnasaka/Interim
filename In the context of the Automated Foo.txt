@@ -1,0 +1,313 @@
+In the context of the Automated Food Detection and Billing System, several algorithms are utilized to perform various tasks, primarily in the domain of computer vision and machine learning. Here are the key algorithms involved:
+
+YOLOv8 (You Only Look Once version 8):
+
+YOLOv8 is a state-of-the-art object detection algorithm that belongs to the family of single-stage object detection models.
+It is known for its speed and accuracy in real-time object detection tasks, making it suitable for applications where efficiency is critical.
+YOLOv8 is used in the system to detect and identify different food items placed on trays in self-service restaurants, enabling automated food evaluation.
+
+Convolutional Neural Networks (CNNs):
+
+CNNs are a class of deep neural networks commonly used in image processing tasks, including object detection, classification, and segmentation.
+They are composed of multiple layers of convolutional filters that extract features from input images, followed by pooling layers for dimensionality reduction and fully connected layers for classification.
+CNNs are employed in the system's image processing module to analyze food images captured by web cameras and identify specific food items with high accuracy.
+
+
+
+Transfer Learning:
+
+Transfer learning is a machine learning technique where a pre-trained model is adapted to a new task by fine-tuning its parameters or using it as a feature extractor.
+In the context of the system, transfer learning may be applied to fine-tune pre-trained CNN models, such as YOLOv8, on a custom dataset of food images to improve their performance in food detection tasks specific to self-service restaurants.
+
+
+
+QR Code Generation Algorithms:
+
+QR code generation algorithms are used to dynamically create QR codes containing payment information, such as total amount owed and transaction data.
+These algorithms encode the payment information into a QR code format, ensuring its readability and security during the payment process.
+QR code generation algorithms are integrated into the system's billing module to generate unique QR codes for each transaction, enabling customers to initiate the payment process using their mobile devices.
+These algorithms play crucial roles in the functionality of the Automated Food Detection and Billing System, enabling automated food evaluation, accurate object detection, and secure payment processing.
+
+
+
+
+
+
+
+
+
+The development of the Automated Food Detection and Billing System involves the use of various programming languages and tools to implement different components and functionalities. Here's an overview of the programming languages and tools used:
+
+Python:
+
+Python is a versatile programming language widely used in machine learning, image processing, and web development.
+Python is utilized for implementing the backend logic of the system, including image processing algorithms, object detection models, and server-side functionality.
+
+
+JavaScript:
+
+JavaScript is a programming language commonly used for web development, particularly for building interactive and dynamic user interfaces.
+JavaScript is employed for frontend development, including creating the user interface of the web application for both patrons and restaurant employees.
+React:
+
+React is a JavaScript library for building user interfaces, particularly for single-page applications.
+React is utilized to develop the frontend of the web application, providing a responsive and intuitive user interface for interacting with the system.
+Node.js:
+
+Node.js is a runtime environment that allows the execution of JavaScript code on the server side.
+Node.js is used to develop server-side components of the system, such as APIs for communication between the frontend and backend, as well as for integrating third-party services.
+Flask:
+
+Flask is a lightweight web framework for Python, suitable for building web applications and APIs.
+Flask is employed to develop the backend server of the system, providing endpoints for processing requests related to food detection, billing, and payment processing.
+TensorFlow and PyTorch:
+
+TensorFlow and PyTorch are popular machine learning frameworks used for building and training deep learning models.
+TensorFlow and PyTorch are utilized for implementing and training convolutional neural networks (CNNs) for object detection and image processing tasks in the system.
+HTML/CSS:
+
+HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) are fundamental technologies for building web pages and defining their layout and style.
+HTML and CSS are used to structure the content and style the user interface of the web application, ensuring a visually appealing and consistent design.
+Git/GitHub:
+
+Git is a version control system used for tracking changes in the source code and collaborating with team members.
+GitHub is a web-based platform for hosting Git repositories and managing project development, enabling collaboration, code review, and issue tracking.
+These programming languages and tools provide the foundation for developing and deploying the Automated Food Detection and Billing System, enabling efficient implementation of its various components and functionalities.
+
+
+
+
+
+
+
+In the development of the Automated Food Detection and Billing System, several third-party components and libraries are utilized to enhance functionality, streamline development, and integrate essential features. Here are some of the third-party components and libraries employed in the system:
+
+
+
+
+
+OpenCV
+
+A well-known open-source computer vision toolkit, OpenCV offers a vast array of features for processing images and videos.
+Food detection in the system is made more accurate and efficient by using OpenCV for tasks like object detection, feature extraction, and image preparation.
+
+
+Roboflow
+
+A platform called Roboflow is used to organize, label, and prepare image collections for use in machine learning applications.
+The object detection model is trained on an image dataset annotated and preprocessed using Roboflow, which also makes data transformation, normalization, and augmentation easier.
+
+
+TensorFlow Object Detection API
+
+A framework for developing and implementing object identification models is called TensorFlow Object identification API, and it is built on top of TensorFlow.
+Convolutional neural networks (CNNs) are trained and implemented using the Object Detection API to identify and distinguish different food items in system-captured photos.
+
+React Bootstrap
+
+For React apps, React Bootstrap is a UI framework that offers responsive component and layout designs already made.
+The web application's frontend incorporates React Bootstrap components to produce an aesthetically pleasing and user-friendly interface for both restaurant staff and customers.
+
+Flask-CORS
+
+For managing Cross-Origin Resource Sharing (CORS) in web applications, Flask-CORS is an extension for Flask.
+Requests from the React frontend can be handled by the Flask backend thanks to Flask-CORS, which facilitates communication between the frontend and backend parts of the system.
+
+
+
+Stripe API
+
+A framework for processing payments that facilitates safe online transactions and billing administration is called the Stripe API.
+By integrating the system with the Stripe API, payments from customers can be accepted and transactions can be processed with ease, guaranteeing a safe and easy billing experience.
+
+
+PayPal API
+
+Another payment processing option that makes online payments and financial transactions easier is the PayPal API.
+Customers now have an additional payment option thanks to integration with the PayPal API, which streamlines and expands the billing process.
+
+
+GitLab/GitHub
+
+Repositories like GitHub or GitLab are utilized for collaborative source code development and version management of the system.
+Team members may work together on the project, monitor changes, and efficiently handle code contributions with GitLab/GitHub repositories.
+By facilitating smooth feature integration and guaranteeing a solid and dependable solution, these third-party parts and libraries significantly improve the Automated Food Detection and Billing System's functionality, efficiency, and usability.
+
+
+
+
+
+
+
+
+
+
+
+
+React: A JavaScript library used for building user interfaces. React allows for the creation of reusable UI components and facilitates the development of interactive and responsive web applications.
+
+Flask: A micro web framework written in Python. Flask is used for developing the backend API of your application. It provides tools and libraries for handling HTTP requests, routing, and integrating with databases.
+
+MongoDB: A NoSQL database used for storing and managing structured and unstructured data. MongoDB offers flexibility and scalability, making it suitable for applications with evolving data requirements.
+
+Cloudinary: A cloud-based image and video management service. Cloudinary is used for storing, optimizing, and delivering images in your application. It provides features such as image transformation, resizing, and optimization, which are essential for handling images in a web application.
+
+TensorFlow: An open-source machine learning framework developed by Google. TensorFlow is used for building and training machine learning models, particularly for image processing tasks such as object detection.
+
+YOLOv8: You Only Look Once (YOLO) version 8 is a state-of-the-art object detection algorithm. YOLOv8 is used for real-time object detection in images captured by the webcam or mobile camera.
+
+PyTorch: An open-source machine learning library developed by Facebook. PyTorch is used for developing and training deep learning models, including object detection models like YOLOv8.
+
+Node.js: A JavaScript runtime environment that enables server-side development. Node.js is used for running JavaScript code on the server, particularly for the backend logic of your application.
+
+Stripe API and PayPal API: Payment gateway APIs used for processing online payments securely. These APIs handle payment transactions, billing computations, and communication with payment processors.
+
+React-Router: A routing library for React applications. React-Router is used for managing navigation and defining routes within your React-based frontend application.
+
+Axios: A promise-based HTTP client for JavaScript. Axios is used for making HTTP requests from the frontend to the backend API, enabling communication between different parts of the application.
+
+Roboflow: An image preprocessing and augmentation platform. Roboflow is used for data preparation and augmentation tasks, such as resizing images, adding annotations, and generating training datasets for machine learning models.
+
+QR Code Libraries (e.g., qrcode, qr-image): Libraries used for generating QR codes dynamically in the backend. These libraries encode payment information and transaction data into QR codes, which can be scanned by mobile devices for initiating payment transactions.
+
+
+Hardware Costs:
+Web Cameras: $XXX
+Mobile Cameras: $XXX
+Plastic Trays with RFID/NFC Tags: $XXX
+RFID/NFC Modules: $XXX
+Laptops: $XXX
+Software Costs:
+Development Tools and IDEs: $XXX
+Licensing Fees for Third-Party Libraries and Frameworks: $XXX
+Cloud Services (e.g., MongoDB Atlas, Cloudinary): $XXX
+Development Costs:
+Salaries and Wages for Developers, Designers, and Testers: $XXX (monthly or per project)
+Outsourcing Costs (if applicable): $XXX
+Training and Skill Development:
+Training Programs or Courses for Team Members: $XXX
+Workshops or Seminars on New Technologies: $XXX
+Marketing and Promotion:
+Marketing Materials (e.g., Brochures, Flyers): $XXX
+Digital Marketing Campaigns: $XXX
+Testing and Quality Assurance:
+Testing Tools and Software: $XXX
+Quality Assurance Services (if outsourced): $XXX
+Miscellaneous Expenses:
+Travel Expenses (if required): $XXX
+Contingency Fund: $XXX (for unforeseen expenses)
+Total Budget: $XXXXX
+
+
+
+Hardware Costs:
+
+Web Cameras: LKR 20,000 each (Total: LKR 100,000)
+Mobile Cameras: LKR 15,000 each (Total: LKR 75,000)
+Plastic Trays with RFID/NFC Tags: LKR 5,000 each (Total: LKR 25,000)
+RFID/NFC Modules: LKR 10,000 each (Total: LKR 50,000)
+Laptops: LKR 100,000 each (Total: LKR 500,000)
+
+Software Costs:
+
+Development Tools and IDEs: LKR 50,000
+Licensing Fees for Third-Party Libraries and Frameworks: LKR 30,000
+Cloud Services (e.g., MongoDB Atlas, Cloudinary): LKR 20,000
+Development Costs:
+
+Salaries and Wages for Developers, Designers, and Testers: LKR 500,000 per month (for 3 months)
+Outsourcing Costs (if applicable): LKR 200,000
+Training and Skill Development:
+
+Training Programs or Courses for Team Members: LKR 50,000
+Workshops or Seminars on New Technologies: LKR 30,000
+Marketing and Promotion:
+
+Marketing Materials (e.g., Brochures, Flyers): LKR 20,000
+Digital Marketing Campaigns: LKR 50,000
+Testing and Quality Assurance:
+
+Testing Tools and Software: LKR 40,000
+Quality Assurance Services (if outsourced): LKR 100,000
+Miscellaneous Expenses:
+
+Travel Expenses (if required): LKR 50,000
+Contingency Fund: LKR 100,000
+Total Budget: LKR 2,430,000
+
+Please note that these are estimated prices, and actual costs may vary. Additionally, some costs like salaries may be recurring, depending on the project timeline and team structure. It's essential to budget carefully and regularly monitor expenses to stay within budget constraints.
+
+
+
+
+
+
+
+
+
+In this research, I have developed an object detection model specifically tailored for Sri Lankan food item image identification and billing system software. The initial step involved gathering a comprehensive dataset of 6000 food item images from Restaurants.  
+
+In this study, I created an object detection model specifically for the Sri Lankan food item identification and billing system software. I collected a dataset of 6000 food item photos from restaurants and tested multiple CNN models for object detection, ultimately picking one with an operational speed of 48ms. This approach was linked into a billing platform, which made restaurant operations more efficient. In Sri Lanka, the software is the first of its kind that can identify individual food products as well as duplicated items.
+
+The presented automatic machine cashier, which uses object detection, demonstrates a proof-of-concept for computing retail product pricing using computer vision algorithms rather than traditional methods such as barcode scanning, RFID, or manual price calculation by operators. 
+
+This technique brings up new opportunities for improving productivity and decreasing human error in checkout systems. 
+
+This research makes a substantial contribution to the integration of the CNN model into the billing application, which improves efficiency and accuracy in detecting food products while also providing a solution for Queues in restaurant.
+
+Future research should focus on improving the accuracy of item detection algorithms and expanding the dataset to include a broader range of food kinds.
+
+
+
+
+Certainly! Here's an expanded list of fact-gathering techniques for your interim report, including YouTube, the internet, and more detail on each:
+
+Literature Review:
+
+Online Databases: Utilize academic databases such as Google Scholar, PubMed, IEEE Xplore, and ACM Digital Library to access a wide range of scholarly articles, conference papers, and research papers.
+Trade Journals and Magazines: Explore industry-specific publications and magazines related to the food industry, technology, and automation for insights and trends.
+Books and E-books: Search for relevant books and e-books on topics such as artificial intelligence, computer vision, and food technology in online libraries or bookstores.
+Whitepapers and Reports: Access whitepapers, industry reports, and market analyses from reputable sources such as research firms, consulting companies, and industry associations.
+Interviews:
+
+Online Interviews: Conduct virtual interviews with experts, industry professionals, and researchers via video conferencing platforms like Zoom, Skype, or Microsoft Teams.
+Email Interviews: Reach out to individuals for asynchronous email interviews, allowing flexibility in scheduling and providing detailed responses.
+Social Media: Engage with professionals in the field through social media platforms like LinkedIn or Twitter to request interviews or gather insights from their posts and discussions.
+Surveys:
+
+Online Surveys: Create online surveys using platforms like Google Forms, SurveyMonkey, or Typeform to gather quantitative data from a broader audience of stakeholders.
+Social Media Polls: Use social media channels to conduct polls and gather quick feedback from a large audience on specific questions related to automation and food image detection.
+Email Surveys: Distribute surveys via email to targeted groups such as restaurant owners, chefs, or technology developers, requesting their input on relevant topics.
+Observational Studies:
+
+YouTube Videos: Watch videos on YouTube showcasing the implementation of automation and food image detection technologies in various settings, such as restaurant kitchens, self-service buffets, or food processing facilities.
+Online Webinars: Attend webinars hosted by industry experts or technology providers discussing the latest developments and applications of automation in the food industry.
+Live Streams: Follow live streams or virtual events focused on food technology and automation to observe demonstrations and discussions on relevant topics.
+Expert Consultation:
+
+Online Consultations: Arrange virtual meetings or consultations with experts in artificial intelligence, computer vision, food science, and restaurant management through professional networking platforms or consultancy services.
+Online Forums: Participate in online forums and communities related to food technology, AI, and automation to seek advice, share insights, and connect with knowledgeable individuals in the field.
+Secondary Research:
+
+Online Articles and Blogs: Explore online articles, blogs, and news websites covering recent advancements and case studies in automation and food image detection.
+Company Websites: Visit the websites of technology companies, startups, and research institutions involved in developing automation solutions for the food industry to gather information on their products and projects.
+Social Media Platforms: Follow relevant hashtags and accounts on platforms like Twitter, LinkedIn, and Reddit to stay updated on discussions, announcements, and trends in the field.
+Prototype Testing:
+
+Online Demos: Participate in online demos or virtual tours offered by technology vendors or research teams to interact with prototype systems for food image detection and automation.
+Beta Testing Programs: Join beta testing programs for software or hardware solutions related to automation in the food industry to provide feedback and insights on usability and functionality.
+Focus Groups:
+
+Virtual Focus Groups: Organize virtual focus group sessions with stakeholders such as restaurant owners, chefs, and consumers using video conferencing tools to facilitate discussions on automation and food image detection.
+Online Communities: Engage with online communities and forums focused on food technology, restaurant management, and AI to initiate discussions and gather diverse perspectives on relevant topics.
+By incorporating these additional sources and methods into your fact-gathering process, you can enhance the comprehensiveness and depth of information for your interim report on automation and food image detection in the food industry.
+
+
+
+
+
+
+
+
+
+
